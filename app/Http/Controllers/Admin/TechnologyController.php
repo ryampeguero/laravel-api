@@ -3,22 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Type;
+use App\Models\Technology;
 use Illuminate\Http\Request;
 
-class TypeController extends Controller
+class TechnologyController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Type $type = null)
+    public function index()
     {
-        $types = Type::all();
-        if (!empty($type)) {
-            return view('admin.types.index', compact('types'));
-        } else {
-            return view('admin.types.index', compact('types', 'type'));
-        }
+        $technologies = Technology::all();
+        return view('admin.technologies.index', compact('technologies'));
     }
 
     /**

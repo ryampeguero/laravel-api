@@ -4,7 +4,6 @@
     <div class="container">
         <h1>Projects</h1>
         <div class="row">
-          
             <div class="col-8">
                 @include('partials.message-success')
                 <table class="table">
